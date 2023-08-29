@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Hello there</h1>
+    <section>
+        <table>
+            <tbody>
+            <tr th:each="getPersonList : ${}">
+                <td th:text="${getPersonList.} + ' ' + ${}"></td>
+                <td th:text="${reservation.option}"></td>
+                <td th:text="${reservation.message}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

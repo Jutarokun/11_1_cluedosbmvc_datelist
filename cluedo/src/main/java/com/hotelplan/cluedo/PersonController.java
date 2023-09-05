@@ -9,11 +9,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PersonController {
 
     @Autowired
-    PersonService service;
+    PersonService PersonService;
+
+    @Autowired
+    WaffeService weaponService;
+
+    @Autowired
+    RoomService raumService;
 
     @GetMapping("/")
     public String addReservation(Model model) {
-        model.addAttribute("getPersonList", service.getPersonList());
+        model.addAttribute("personList", PersonService.getPersonList());
+        model.addAttribute("weaponList", weaponService.getWeaponList());
+        model.addAttribute("roomList", raumService.getRoomList());
         return "cluedo";
     }
 }

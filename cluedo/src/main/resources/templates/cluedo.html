@@ -2,20 +2,48 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Meine Taverne</title>
+    <link rel="stylesheet" href="css/mvp.css">
+    <!-- link rel="stylesheet" href="css/tavern.css"-->
 </head>
 <body>
-    <h1>Hello there</h1>
+<main>
     <section>
+    <h1>These are the persons</h1>
         <table>
             <tbody>
-            <tr th:each="getPersonList : ${}">
-                <td th:text="${getPersonList.} + ' ' + ${}"></td>
-                <td th:text="${reservation.option}"></td>
-                <td th:text="${reservation.message}"></td>
+            <tr th:each="person : ${personList}">
+                <td th:text="${person.name} + ' ' + ${person.surname}"></td>
+                <td th:text="${person.age}"></td>
+                <td th:text="${person.job}"></td>
             </tr>
             </tbody>
         </table>
     </section>
+    <section>
+    <h1>Weapons</h1>
+        <table>
+            <tbody>
+            <tr th:each="weapon : ${weaponList}">
+                <td th:text="${weapon.description}"></td>
+                <td th:text="${weapon.howLong}"></td>
+                <td th:text="${weapon.material}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+    <h1>Rooms</h1>
+        <table>
+            <tbody>
+            <tr th:each="room : ${roomList}">
+                <td th:text="${room.roomName}"></td>
+                <td th:text="${room.doors}"></td>
+                <td th:text="${room.roomPattern}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
 </body>
 </html>

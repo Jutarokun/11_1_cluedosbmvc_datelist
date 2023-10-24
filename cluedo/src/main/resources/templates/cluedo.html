@@ -9,7 +9,8 @@
 <body>
 <main>
     <section>
-    <h1>These are the persons</h1>
+        <aside>
+            <h1>Persons</h1>
         <table>
             <tbody>
             <tr th:each="person : ${personList}">
@@ -19,9 +20,9 @@
             </tr>
             </tbody>
         </table>
-    </section>
-    <section>
-    <h1>Weapons</h1>
+        </aside>
+        <aside>
+            <h1>Weapons</h1>
         <table>
             <tbody>
             <tr th:each="weapon : ${weaponList}">
@@ -31,9 +32,9 @@
             </tr>
             </tbody>
         </table>
-    </section>
-    <section>
-    <h1>Rooms</h1>
+        </aside>
+        <aside>
+            <h1>Rooms</h1>
         <table>
             <tbody>
             <tr th:each="room : ${roomList}">
@@ -43,6 +44,7 @@
             </tr>
             </tbody>
         </table>
+        </aside>
     </section>
 </main>
 </body>

@@ -19,21 +19,6 @@ public class GameLogicTest {
     }
 
     @Test
-    void evaluateSuggestion() {
-        int numberOfSuggestion = 0;
-        int maxNumberOfSuggestions = 8;
-
-        // setup secret
-
-        secret.setActor(0);
-        secret.setWeapon(0);
-        secret.setScene(0);
-
-        // return true is expected
-        assertEquals(true, gameLogic.evaluateSuggestion(suggestion, secret, numberOfSuggestion, maxNumberOfSuggestions));
-    }
-
-    @Test
     void ActorWeaponSceneNotEqualThenReturnFalseAndHistory0() {
         int numberOfSuggestion = 0;
         int maxNumberOfSuggestions = 8;

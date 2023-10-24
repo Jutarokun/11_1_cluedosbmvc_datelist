@@ -1,7 +1,10 @@
 package com.hotelplan.cluedo;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class DataService {
     public List<Person> personList = List.of(
             new Person("Max", "Mustermann", 30,  "Softwareentwickler"),
